@@ -43,8 +43,8 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="poshButtonPushed" destination="oBq-8z-UXl" eventType="touchUpInside" id="8rt-BY-UoN"/>
                                     <action selector="poshButtonPushed" destination="Fwx-S9-owP" eventType="touchUpInside" id="dcv-70-AVL"/>
+                                    <action selector="postButtonPushed" destination="oBq-8z-UXl" eventType="touchUpInside" id="8rt-BY-UoN"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MW2-Ud-fSO">

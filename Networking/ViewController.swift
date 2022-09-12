@@ -47,6 +47,7 @@ class ViewController: UIViewController {
         var request = URLRequest(url: url)
         request.httpMethod = "POST"
         
+        // Обратная сериализация наших данных - для отправки на сервер
         guard let httpBody = try? JSONSerialization.data(withJSONObject: userData, options: []) else { return }
         request.httpBody = httpBody
         request.addValue("application/json ", forHTTPHeaderField: "Content-Type")

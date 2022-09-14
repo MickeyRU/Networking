@@ -16,6 +16,8 @@
 		BEA1B9D528CA23A7001963B1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA1B9D428CA23A7001963B1 /* ViewController.swift */; };
 		BEA1B9D728CF5C40001963B1 /* CoursesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA1B9D628CF5C40001963B1 /* CoursesViewController.swift */; };
 		BEA1B9D928CF5DBA001963B1 /* CoursesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA1B9D828CF5DBA001963B1 /* CoursesModel.swift */; };
+		BEA1B9DB28D0720F001963B1 /* CoursesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA1B9DA28D0720F001963B1 /* CoursesCell.swift */; };
+		BEA1B9DD28D1F123001963B1 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA1B9DC28D1F123001963B1 /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		BEA1B9D428CA23A7001963B1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		BEA1B9D628CF5C40001963B1 /* CoursesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoursesViewController.swift; sourceTree = "<group>"; };
 		BEA1B9D828CF5DBA001963B1 /* CoursesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoursesModel.swift; sourceTree = "<group>"; };
+		BEA1B9DA28D0720F001963B1 /* CoursesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoursesCell.swift; sourceTree = "<group>"; };
+		BEA1B9DC28D1F123001963B1 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +72,8 @@
 				BEA1B9C428C9F7FF001963B1 /* ImageViewController.swift */,
 				BEA1B9D628CF5C40001963B1 /* CoursesViewController.swift */,
 				BEA1B9D828CF5DBA001963B1 /* CoursesModel.swift */,
+				BEA1B9DA28D0720F001963B1 /* CoursesCell.swift */,
+				BEA1B9DC28D1F123001963B1 /* DetailViewController.swift */,
 				BEA1B9C628C9F7FF001963B1 /* Main.storyboard */,
 				BEA1B9C928C9F800001963B1 /* Assets.xcassets */,
 				BEA1B9CB28C9F800001963B1 /* LaunchScreen.storyboard */,
@@ -151,8 +157,10 @@
 				BEA1B9C128C9F7FF001963B1 /* AppDelegate.swift in Sources */,
 				BEA1B9D528CA23A7001963B1 /* ViewController.swift in Sources */,
 				BEA1B9C328C9F7FF001963B1 /* SceneDelegate.swift in Sources */,
+				BEA1B9DB28D0720F001963B1 /* CoursesCell.swift in Sources */,
 				BEA1B9D928CF5DBA001963B1 /* CoursesModel.swift in Sources */,
 				BEA1B9D728CF5C40001963B1 /* CoursesViewController.swift in Sources */,
+				BEA1B9DD28D1F123001963B1 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

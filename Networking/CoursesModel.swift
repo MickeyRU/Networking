@@ -8,10 +8,10 @@
 import Foundation
 
 struct CoursesModel: Decodable {
-    var id: Int
-    var name: String
-    var link: String
-    var imageUrl: String
-    var number_of_lessons: Int
-    var number_of_tests: Int
+    var id: Int?
+    var name: String?
+    var link: String?
+    var imageUrl: String?
+    var numberOfLessons: Int?
+    var numberOfTests: Int?
 }

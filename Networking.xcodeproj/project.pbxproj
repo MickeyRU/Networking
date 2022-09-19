@@ -20,6 +20,7 @@
 		BEA1B9DF28D20136001963B1 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA1B9DE28D20136001963B1 /* MainViewController.swift */; };
 		BEA1B9E128D20149001963B1 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA1B9E028D20149001963B1 /* CollectionViewCell.swift */; };
 		BEBB870E28D88A4900340526 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEBB870D28D88A4900340526 /* NetworkManager.swift */; };
+		BEBB871028D8BBE500340526 /* ImageProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEBB870F28D8BBE500340526 /* ImageProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		BEA1B9DE28D20136001963B1 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		BEA1B9E028D20149001963B1 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		BEBB870D28D88A4900340526 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		BEBB870F28D8BBE500340526 /* ImageProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageProperties.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +110,7 @@
 			isa = PBXGroup;
 			children = (
 				BEA1B9D828CF5DBA001963B1 /* CoursesModel.swift */,
+				BEBB870F28D8BBE500340526 /* ImageProperties.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -191,6 +194,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BEBB871028D8BBE500340526 /* ImageProperties.swift in Sources */,
 				BEA1B9E128D20149001963B1 /* CollectionViewCell.swift in Sources */,
 				BEA1B9C528C9F7FF001963B1 /* ImageViewController.swift in Sources */,
 				BEA1B9C128C9F7FF001963B1 /* AppDelegate.swift in Sources */,

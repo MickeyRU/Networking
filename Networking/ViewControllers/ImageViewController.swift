@@ -7,6 +7,8 @@
 
 import UIKit
 
+private let url = "https://i.artfile.ru/1920x1200_1072880_[www.ArtFile.ru].jpg"
+
 class ImageViewController: UIViewController {
     
     @IBOutlet weak var imageForLoad: UIImageView!
@@ -24,18 +26,11 @@ class ImageViewController: UIViewController {
         activityIndicator.isHidden = false
         activityIndicator.startAnimating()
         
-        guard let url = URL(string: "https://i.artfile.ru/1920x1200_1072880_[www.ArtFile.ru].jpg") else { return }
-         
-        let session = URLSession.shared
-        
-        session.dataTask(with: url) { (data, responce, error) in
-            if let data = data, let image = UIImage(data: data) {
-                DispatchQueue.main.async {
-                    self.activityIndicator.stopAnimating()
-                    self.imageForLoad.image = image
-                }
-            }
-        }.resume()
+        NetworkManager.downloadImage(url: url) { (image) in
+            self.activityIndicator.stopAnimating()
+            self.imageForLoad.image = image
+        }
+       
     }
 }
 

@@ -13,11 +13,13 @@
 		BEA1B9C828C9F7FF001963B1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BEA1B9C628C9F7FF001963B1 /* Main.storyboard */; };
 		BEA1B9CA28C9F800001963B1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BEA1B9C928C9F800001963B1 /* Assets.xcassets */; };
 		BEA1B9CD28C9F800001963B1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BEA1B9CB28C9F800001963B1 /* LaunchScreen.storyboard */; };
-		BEA1B9D528CA23A7001963B1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA1B9D428CA23A7001963B1 /* ViewController.swift */; };
 		BEA1B9D728CF5C40001963B1 /* CoursesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA1B9D628CF5C40001963B1 /* CoursesViewController.swift */; };
 		BEA1B9D928CF5DBA001963B1 /* CoursesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA1B9D828CF5DBA001963B1 /* CoursesModel.swift */; };
 		BEA1B9DB28D0720F001963B1 /* CoursesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA1B9DA28D0720F001963B1 /* CoursesCell.swift */; };
 		BEA1B9DD28D1F123001963B1 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA1B9DC28D1F123001963B1 /* DetailViewController.swift */; };
+		BEA1B9DF28D20136001963B1 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA1B9DE28D20136001963B1 /* MainViewController.swift */; };
+		BEA1B9E128D20149001963B1 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA1B9E028D20149001963B1 /* CollectionViewCell.swift */; };
+		BEBB870E28D88A4900340526 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEBB870D28D88A4900340526 /* NetworkManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,11 +31,13 @@
 		BEA1B9C928C9F800001963B1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BEA1B9CC28C9F800001963B1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BEA1B9CE28C9F800001963B1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BEA1B9D428CA23A7001963B1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		BEA1B9D628CF5C40001963B1 /* CoursesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoursesViewController.swift; sourceTree = "<group>"; };
 		BEA1B9D828CF5DBA001963B1 /* CoursesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoursesModel.swift; sourceTree = "<group>"; };
 		BEA1B9DA28D0720F001963B1 /* CoursesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoursesCell.swift; sourceTree = "<group>"; };
 		BEA1B9DC28D1F123001963B1 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		BEA1B9DE28D20136001963B1 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		BEA1B9E028D20149001963B1 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
+		BEBB870D28D88A4900340526 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,18 +72,52 @@
 			children = (
 				BEA1B9C028C9F7FF001963B1 /* AppDelegate.swift */,
 				BEA1B9C228C9F7FF001963B1 /* SceneDelegate.swift */,
-				BEA1B9D428CA23A7001963B1 /* ViewController.swift */,
-				BEA1B9C428C9F7FF001963B1 /* ImageViewController.swift */,
-				BEA1B9D628CF5C40001963B1 /* CoursesViewController.swift */,
-				BEA1B9D828CF5DBA001963B1 /* CoursesModel.swift */,
-				BEA1B9DA28D0720F001963B1 /* CoursesCell.swift */,
-				BEA1B9DC28D1F123001963B1 /* DetailViewController.swift */,
 				BEA1B9C628C9F7FF001963B1 /* Main.storyboard */,
+				BEBB870928D8879200340526 /* ViewControllers */,
+				BEBB870A28D887B100340526 /* Cells */,
+				BEBB870B28D887E200340526 /* Model */,
+				BEBB870C28D88A2F00340526 /* Network */,
 				BEA1B9C928C9F800001963B1 /* Assets.xcassets */,
 				BEA1B9CB28C9F800001963B1 /* LaunchScreen.storyboard */,
 				BEA1B9CE28C9F800001963B1 /* Info.plist */,
 			);
 			path = Networking;
+			sourceTree = "<group>";
+		};
+		BEBB870928D8879200340526 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				BEA1B9DE28D20136001963B1 /* MainViewController.swift */,
+				BEA1B9C428C9F7FF001963B1 /* ImageViewController.swift */,
+				BEA1B9D628CF5C40001963B1 /* CoursesViewController.swift */,
+				BEA1B9DC28D1F123001963B1 /* DetailViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		BEBB870A28D887B100340526 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				BEA1B9E028D20149001963B1 /* CollectionViewCell.swift */,
+				BEA1B9DA28D0720F001963B1 /* CoursesCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		BEBB870B28D887E200340526 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				BEA1B9D828CF5DBA001963B1 /* CoursesModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		BEBB870C28D88A2F00340526 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				BEBB870D28D88A4900340526 /* NetworkManager.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -153,12 +191,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BEA1B9E128D20149001963B1 /* CollectionViewCell.swift in Sources */,
 				BEA1B9C528C9F7FF001963B1 /* ImageViewController.swift in Sources */,
 				BEA1B9C128C9F7FF001963B1 /* AppDelegate.swift in Sources */,
-				BEA1B9D528CA23A7001963B1 /* ViewController.swift in Sources */,
+				BEBB870E28D88A4900340526 /* NetworkManager.swift in Sources */,
 				BEA1B9C328C9F7FF001963B1 /* SceneDelegate.swift in Sources */,
 				BEA1B9DB28D0720F001963B1 /* CoursesCell.swift in Sources */,
 				BEA1B9D928CF5DBA001963B1 /* CoursesModel.swift in Sources */,
+				BEA1B9DF28D20136001963B1 /* MainViewController.swift in Sources */,
 				BEA1B9D728CF5C40001963B1 /* CoursesViewController.swift in Sources */,
 				BEA1B9DD28D1F123001963B1 /* DetailViewController.swift in Sources */,
 			);

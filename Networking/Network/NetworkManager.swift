@@ -1,21 +1,19 @@
 //
-//  ViewController.swift
+//  NetworkManager.swift
 //  Networking
 //
-//  Created by Павел Афанасьев on 08.09.2022.
+//  Created by Павел Афанасьев on 19.09.2022.
 //
 
 import UIKit
 
-class ViewController: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
+class NetworkManager {
     
-    @IBAction func getButtonPushed() {
+    // static - позволяет не создавать экземпляр класса для вызова метода из вне
+    
+    static func getRequest(url: String) {
         
-        guard let url = URL(string: "https://jsonplaceholder.typicode.com/posts") else { return }
+        guard let url = URL(string: url) else { return }
         
         let session = URLSession.shared
         session.dataTask(with: url) { (data, response, error) in
@@ -34,11 +32,10 @@ class ViewController: UIViewController {
         }.resume()
     }
     
-    
-    @IBAction func postButtonPushed() {
+    static func postRequest(url: String) {
         
         // Адресс с которым взаимодействуем
-        guard let url = URL(string: "https://jsonplaceholder.typicode.com/posts") else { return }
+        guard let url = URL(string: url) else { return }
 
         // Данные которые мы отправляем на сервер
         let userData = ["Course": "Networking", "Student": "Pavel Afanasyev"]
@@ -69,4 +66,42 @@ class ViewController: UIViewController {
             }
         }.resume()
     }
+
+    // Захватываем данные о картике полученные из сети и передаем их через комплишен блок в вью контроллер для обновления интерфейса
+    
+    static func downloadImage(url: String, complition: @escaping (_ image: UIImage)->()) {
+        
+        guard let url = URL(string: url) else { return }
+         
+        let session = URLSession.shared
+        
+        session.dataTask(with: url) { (data, _, _) in
+            if let data = data, let image = UIImage(data: data) {
+                DispatchQueue.main.async {
+                    complition(image)
+                }
+            }
+        }.resume()
+    }
+    
+    static func fetchData(url: String, complition: @escaping (_ courses: [CoursesModel])->()) {
+        
+        guard let url = URL(string: url) else { return }
+        
+        URLSession.shared.dataTask(with: url) { (data, _, _) in
+            guard let data = data else { return }
+            
+            do {
+                let jsonDecoder = JSONDecoder()
+                jsonDecoder.keyDecodingStrategy = .convertFromSnakeCase
+                let courses = try jsonDecoder.decode([CoursesModel].self, from: data)
+                
+                complition(courses)
+               
+            } catch let error as NSError {
+                print(error.localizedDescription)
+            }
+        }.resume()
+    }
+    
 }

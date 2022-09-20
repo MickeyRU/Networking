@@ -14,6 +14,7 @@ enum Actions: String, CaseIterable {
     case post = "POST"
     case OurCourses = "Our Courses"
     case uploadImage = "Upload Images"
+    case downloadFile = "Download File"
 }
 
 private let reuseIdentifier = "Cell"
@@ -58,6 +59,9 @@ class MainViewController: UICollectionViewController {
             performSegue(withIdentifier: "ourCourse", sender: self)
         case .uploadImage:
             NetworkManager.uploadImage(url: uploadImageUrl)
+        case .downloadFile:
+            print("dowloadFile")
+        
         }
     }
 }

@@ -16,6 +16,7 @@ enum Actions: String, CaseIterable {
     case OurCourses = "Our Courses"
     case uploadImage = "Upload Images"
     case downloadFile = "Download File"
+    case ourCoursesAlamofire = "Our Courses (Alamofire)"
 }
 
 private let reuseIdentifier = "Cell"
@@ -50,7 +51,7 @@ class MainViewController: UICollectionViewController {
         alert = UIAlertController(title: "Downloading ...", message: "0", preferredStyle: .alert)
         
         // Увеличиваем высоту алерта для размещения дополнительных элементов
-        let height = NSLayoutConstraint(item: alert.view,
+        let height = NSLayoutConstraint(item: alert.view!,
                                         attribute: .height,
                                         relatedBy: .equal,
                                         toItem: nil, attribute: .notAnAttribute,
@@ -124,6 +125,22 @@ class MainViewController: UICollectionViewController {
         case .downloadFile:
             showAlert()
             dataProvider.startDownload()
+        case .ourCoursesAlamofire:
+            performSegue(withIdentifier: "ourCourseWithAlamofire", sender: self)
+        }
+    }
+    
+    // MARK: - Navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let coursesVC = segue.destination as? CoursesViewController
+        
+        switch segue.identifier {
+        case "ourCourse":
+            coursesVC?.fetchData()
+        case "ourCourseWithAlamofire":
+            coursesVC?.fetchDataWithAlamofire()
+        default:
+            break
         }
     }
 }

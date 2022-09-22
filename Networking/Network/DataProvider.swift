@@ -15,9 +15,10 @@ class DataProvider: NSObject {
     
     // Настройка конфигурации сессии
     private lazy var bgSession: URLSession = {
+        
         let config = URLSessionConfiguration.background(withIdentifier: "pavelAfanasiev.Networking") // bundle name
 //        config.isDiscretionary = true // оптимизация загрузки операционной системой
-        config.sessionSendsLaunchEvents = true // по завершению загрузки данных приложение запустится в фоновом режиме
+        config.sessionSendsLaunchEvents = true // по завершению загрузки данных приложение запустится в фоновом режиме, для backgroud по умолчанию true
         return URLSession(configuration: config, delegate: self, delegateQueue: nil)
     }()
     

@@ -16,12 +16,7 @@ class CoursesViewController: UIViewController {
     private var courseUrl: String?
     private var url = "https://swiftbook.ru/wp-content/uploads/api/api_courses"
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        fetchData()
-    }
-    
-    private func fetchData() {
+    func fetchData() {
         
         NetworkManager.fetchData(url: url) { (courses) in
             self.courses = courses
@@ -32,6 +27,10 @@ class CoursesViewController: UIViewController {
         }
     }
     
+    func fetchDataWithAlamofire() {
+        
+        AlamofireNetworkRequest.sendRequest(url: url)
+    }
     private func configureCell (cell: CoursesCell, for indexPath: IndexPath) {
         let course = courses[indexPath.row]
         cell.coursesNameLabel.text = course.name
